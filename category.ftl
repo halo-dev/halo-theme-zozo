@@ -22,17 +22,17 @@
             <#if posts.totalPages gt 1>
                 <#if posts.hasPrevious()>
                     <#if posts.number == 1>
-                        <a href="${options.blog_url!}" class="pre">
+                        <a href="${options.blog_url!}/categories/${category.slugName!}" class="pre">
                             上一页
                         </a>
                     <#else>
-                        <a href="${options.blog_url!}/page/${posts.number}" class="pre">
+                        <a href="${options.blog_url!}/categories/${category.slugName!}/page/${posts.number}" class="pre">
                             上一页
                         </a>
                     </#if>
                 </#if>
                 <#if posts.hasNext()>
-                    <a href="${options.blog_url!}/page/${posts.number+2}" class="next">
+                    <a href="${options.blog_url!}/categories/${category.slugName!}/page/${posts.number+2}" class="next">
                         下一页
                     </a>
                 </#if>

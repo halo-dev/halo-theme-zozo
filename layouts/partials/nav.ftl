@@ -3,7 +3,7 @@
     <ul>
       <@menuTag method="list">
         <#if menus?? && menus?size gt 0>
-            <#list menus as menu>
+            <#list menus?sort_by('priority') as menu>
               <li>
                 <a href="${menu.url!}">${menu.name!}</a>
               </li>

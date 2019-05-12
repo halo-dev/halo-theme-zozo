@@ -1,11 +1,11 @@
 <footer class="footer">
   <div class="powered_by">
     <a href="https://zeuk.me">Designed by Zeuk,</a>
-    <a href="http://www.gohugo.io/">Proudly published with Hugo</a>
+    <a href="https://github.com/halo-dev/halo">Proudly published with Halo</a>
   </div>
 
   <div class="footer_slogan">
-    <span>{{ .Site.Params.footerSlogan }}</span>
+    <span>${settings.footer_slogan!'我的精神家园'}</span>
   </div>
 </footer>
 

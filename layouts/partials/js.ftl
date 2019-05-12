@@ -1,3 +1,4 @@
+<#include "/common/macro/common_macro.ftl">
 <script src="/${theme.folderName}/static/js/jquery-3.3.1.min.js"></script>
 <script src="/${theme.folderName}/static/js/zozo.js"></script>
 <script src="/${theme.folderName}/static/js/highlight.pack.js"></script>
@@ -9,3 +10,5 @@
 <#if settings.enable_mathJax!true>
 <#include "mathjax.ftl">
 </#if>
+
+<@statistics />

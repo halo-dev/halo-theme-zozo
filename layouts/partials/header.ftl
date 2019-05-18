@@ -2,9 +2,9 @@
   <div class="site_title_container">
     <div class="site_title">
       <h1>
-        <a href="${options.blog_url!}">
+        <a href="${ctx!}">
           <span>${options.blog_title!}</span>
-          <img src="/${theme.folderName}/static/images/logo.svg"/>
+          <img src="/${static!}/static/images/logo.svg"/>
         </a>
       </h1>
     </div>

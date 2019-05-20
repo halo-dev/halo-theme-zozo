@@ -20,10 +20,10 @@
   <@verification />
   <@favicon />
 
-  <link rel="stylesheet" href="/${static!}/static/css/animate.min.css"/>
-  <link rel="stylesheet" href="/${static!}/static/css/remixicon.css"/>
-  <link rel="stylesheet" href="/${static!}/static/css/zozo.css"/>
-  <link rel="stylesheet" href="/${static!}/static/css/highlight.css"/>
+  <link rel="stylesheet" href="${static!}/static/css/animate.min.css"/>
+  <link rel="stylesheet" href="${static!}/static/css/remixicon.css"/>
+  <link rel="stylesheet" href="${static!}/static/css/zozo.css"/>
+  <link rel="stylesheet" href="${static!}/static/css/highlight.css"/>
 
   <#if settings.custom_css??>
   <style>

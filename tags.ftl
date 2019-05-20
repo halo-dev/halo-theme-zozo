@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="标签 · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${ctx!}/tags" />
+<@head title="标签 · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/tags" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -11,7 +11,7 @@
                     <#if tags?? && tags?size gt 0>
                         <#list tags as tag>
                         <li>
-                            <a href="${ctx!}/tags/${tag.slugName!}">
+                            <a href="${context!}/tags/${tag.slugName!}">
                                 ${tag.name!} <span class="terms_count">${tag.postCount!0}</span>
                             </a>
                         </li>

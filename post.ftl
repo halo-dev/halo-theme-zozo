@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="${post.title!} · ${options.blog_title}" keywords="${options.seo_keywords!},${tagWords!}" description="${post.summary!}" canonical="${ctx!}/archives/${post.url!}" />
+<@head title="${post.title!} · ${options.blog_title}" keywords="${options.seo_keywords!},${tagWords!}" description="${post.summary!}" canonical="${context!}/archives/${post.url!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -8,7 +8,7 @@
         <div class="post_page">
             <div class="post animated fadeInDown">
                 <div class="post_title post_detail_title">
-                    <h2><a href='${ctx!}/archives/${post.url!}'>${post.title!}</a></h2>
+                    <h2><a href='${context!}/archives/${post.url!}'>${post.title!}</a></h2>
                     <span class="date">${post.createTime?string('yyyy.MM.dd')}</span>
                 </div>
                 <div class="post_content markdown">${post.formatContent}</div>
@@ -19,7 +19,7 @@
                           <span class="field tags">
                             <i class="remixicon-stack-line"></i>
                             <#list tags as tag>
-                                <a href="${ctx!}/tags/${tag.slugName!}">${tag.name!}</a>
+                                <a href="${context!}/tags/${tag.slugName!}">${tag.name!}</a>
                             </#list>
                           </span>
                         </div>

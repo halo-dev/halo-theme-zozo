@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="标签：${category.name} · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${ctx!}/categories/${category.slugName!}" />
+<@head title="标签：${category.name} · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/categories/${category.slugName!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -11,7 +11,7 @@
                 <#list posts.content as post>
                 <div class="listing_item">
                     <div class="listing_post">
-                        <a href="${ctx!}/archives/${post.url!}">${post.title!}</a>
+                        <a href="${context!}/archives/${post.url!}">${post.title!}</a>
                         <div class="post_time"><span class="date">${post.createTime?string('yyyy-MM-dd')}</span></div>
                     </div>
                 </div>
@@ -22,17 +22,17 @@
             <#if posts.totalPages gt 1>
                 <#if posts.hasPrevious()>
                     <#if posts.number == 1>
-                        <a href="${ctx!}/categories/${category.slugName!}" class="pre">
+                        <a href="${context!}/categories/${category.slugName!}" class="pre">
                             上一页
                         </a>
                     <#else>
-                        <a href="${ctx!}/categories/${category.slugName!}/page/${posts.number}" class="pre">
+                        <a href="${context!}/categories/${category.slugName!}/page/${posts.number}" class="pre">
                             上一页
                         </a>
                     </#if>
                 </#if>
                 <#if posts.hasNext()>
-                    <a href="${ctx!}/categories/${category.slugName!}/page/${posts.number+2}" class="next">
+                    <a href="${context!}/categories/${category.slugName!}/page/${posts.number+2}" class="next">
                         下一页
                     </a>
                 </#if>

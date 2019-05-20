@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${ctx!}" />
+<@head title="${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">

@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="${sheet.title!} · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${sheet.summary!}" canonical="${ctx!}/s/${sheet.url!}" />
+<@head title="${sheet.title!} · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${sheet.summary!}" canonical="${context!}/s/${sheet.url!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -8,7 +8,7 @@
         <div class="post_page">
             <div class="post animated fadeInDown">
                 <div class="post_title post_detail_title">
-                    <h2><a href='${ctx!}/archives/${sheet.url!}'>${sheet.title!}</a></h2>
+                    <h2><a href='${context!}/archives/${sheet.url!}'>${sheet.title!}</a></h2>
                     <span class="date">${sheet.createTime?string('yyyy.MM.dd')}</span>
                 </div>
                 <div class="post_content markdown">${sheet.formatContent}</div>

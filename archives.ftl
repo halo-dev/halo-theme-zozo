@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="归档 · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${ctx!}/archives" />
+<@head title="归档 · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/archives" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -13,7 +13,7 @@
                         <#list archive.posts?sort_by("createTime")?reverse as post>
                             <div class="listing_item">
                                 <div class="listing_post">
-                                    <a href="${ctx!}/archives/${post.url!}">${post.title!}</a>
+                                    <a href="${context!}/archives/${post.url!}">${post.title!}</a>
                                     <div class="post_time"><span class="date">${post.createTime?string('MM-dd')}</span></div>
                                 </div>
                             </div>

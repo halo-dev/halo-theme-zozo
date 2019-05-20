@@ -1,7 +1,7 @@
 <#list posts.content as post>
 <div class="post animated fadeInDown">
   <div class="post_title">
-    <h2><a href='${ctx!}/archives/${post.url!}'>${post.title!}</a></h2>
+    <h2><a href='${context!}/archives/${post.url!}'>${post.title!}</a></h2>
   </div>
   <#if settings.enable_summary!true>
   <div class="list">
@@ -21,7 +21,7 @@
         <span class="field tags">
           <i class="remixicon-stack-line"></i>
           <#list post.tags as tag>
-          <a href="${ctx!}/tags/${tag.slugName!}">${tag.name!}</a>
+          <a href="${context!}/tags/${tag.slugName!}">${tag.name!}</a>
           </#list>
         </span>
         </#if>
@@ -35,17 +35,17 @@
   <#if posts.totalPages gt 1>
     <#if posts.hasPrevious()>
       <#if posts.number == 1>
-        <a href="${ctx!}" class="pre">
+        <a href="${context!}" class="pre">
           返回上一页
         </a>
       <#else>
-        <a href="${ctx!}/page/${posts.number}" class="pre">
+        <a href="${context!}/page/${posts.number}" class="pre">
           返回上一页
         </a>
       </#if>
     </#if>
     <#if posts.hasNext()>
-      <a href="${ctx!}/page/${posts.number+2}" class="next">
+      <a href="${context!}/page/${posts.number+2}" class="next">
         阅读更多文章
       </a>
     </#if>

@@ -1,4 +1,3 @@
-<#include "/common/macro/common_macro.ftl">
 <#macro head title,keywords,description,canonical>
 <!DOCTYPE html>
 <html lang="zh-cn">
@@ -17,8 +16,7 @@
 
   <title>${title!}</title>
 
-  <@verification />
-  <@favicon />
+  <@global.head />
 
   <link rel="stylesheet" href="${static!}/static/css/animate.min.css"/>
   <link rel="stylesheet" href="${static!}/static/css/remixicon.css"/>

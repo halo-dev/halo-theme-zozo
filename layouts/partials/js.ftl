@@ -1,4 +1,3 @@
-<#include "/common/macro/common_macro.ftl">
 <script src="${static!}/static/js/jquery-3.3.1.min.js"></script>
 <script src="${static!}/static/js/zozo.js"></script>
 <script src="${static!}/static/js/highlight.pack.js"></script>
@@ -11,4 +10,4 @@
 <#include "mathjax.ftl">
 </#if>
 
-<@statistics />
+<@global.statistics />

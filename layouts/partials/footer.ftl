@@ -1,4 +1,3 @@
-<#include "/common/macro/common_macro.ftl">
 <footer class="footer">
   <div class="powered_by">
     <a href="https://zeuk.me">Designed by Zeuk,</a>
@@ -9,7 +8,7 @@
     <span>${settings.footer_slogan!'我的精神家园'}</span>
   </div>
 
-  <@footer_info />
+  <@global.footer_info />
 </footer>
 
 

@@ -8,7 +8,7 @@
 
 ## 预览截图
 
-![index](https://i.loli.net/2019/05/29/5ced70aa913ed16600.png)
+![index](https://i.loli.net/2019/09/19/6TQ3ehzraHUmGwn.png)
 
 ![settings](https://i.loli.net/2019/05/29/5ced70ab1b34a26780.png)
 

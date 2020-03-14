@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="分类 · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/categories" />
+<@head title="分类 · ${blog_title!}" canonical="${categories_url!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -11,7 +11,7 @@
                     <#if categories?? && categories?size gt 0>
                         <#list categories as category>
                         <li>
-                            <a href="${context!}/categories/${category.slugName!}">
+                            <a href="${category.fullPath!}">
                                 ${category.name!} <span class="terms_count">${category.postCount!0}</span>
                             </a>
                         </li>

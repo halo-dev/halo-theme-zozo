@@ -1,4 +1,4 @@
-<#macro head title,keywords,description,canonical>
+<#macro head title,canonical>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -8,8 +8,8 @@
 
   <!-- author & description & keywords  -->
   <meta name="author" content=${user.nickname!}/>
-  <meta name="description" content="${description}"/>
-  <meta name="keywords" content="${keywords}" />
+  <meta name="description" content="${meta_description!}"/>
+  <meta name="keywords" content="${meta_keywords!}" />
 
   <!-- Permalink & RSSlink -->
   <link rel="canonical" href="${canonical}"/>
@@ -18,10 +18,10 @@
 
   <@global.head />
 
-  <link rel="stylesheet" href="${static!}/static/css/animate.min.css"/>
-  <link rel="stylesheet" href="${static!}/static/css/remixicon.css"/>
-  <link rel="stylesheet" href="${static!}/static/css/zozo.css"/>
-  <link rel="stylesheet" href="${static!}/static/css/highlight.css"/>
+  <link rel="stylesheet" href="${theme_base!}/static/css/animate.min.css"/>
+  <link rel="stylesheet" href="${theme_base!}/static/css/remixicon.css"/>
+  <link rel="stylesheet" href="${theme_base!}/static/css/zozo.css"/>
+  <link rel="stylesheet" href="${theme_base!}/static/css/highlight.css"/>
 
   <#if settings.custom_css??>
   <style>

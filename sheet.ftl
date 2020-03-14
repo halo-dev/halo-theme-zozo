@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="${sheet.title!} · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${sheet.summary!}" canonical="${context!}/s/${sheet.url!}" />
+<@head title="${sheet.title!} · ${blog_title!}" canonical="${sheet.fullPath!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">

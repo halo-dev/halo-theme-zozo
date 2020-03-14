@@ -1,7 +1,7 @@
 <#list posts.content as post>
 <div class="post animated fadeInDown">
   <div class="post_title">
-    <h2><a href='${context!}/archives/${post.url!}'>${post.title!}</a></h2>
+    <h2><a href='${post.fullPath!}'>${post.title!}</a></h2>
   </div>
   <#if settings.enable_summary!true>
   <div class="list">
@@ -21,7 +21,7 @@
         <span class="field tags">
           <i class="remixicon-stack-line"></i>
           <#list post.tags as tag>
-          <a href="${context!}/tags/${tag.slugName!}">${tag.name!}</a>
+          <a href="${tag.fullPath!}">${tag.name!}</a>
           </#list>
         </span>
         </#if>
@@ -33,21 +33,17 @@
 
 <div class="pagination">
   <#if posts.totalPages gt 1>
-    <#if posts.hasPrevious()>
-      <#if posts.number == 1>
-        <a href="${context!}" class="pre">
-          返回上一页
-        </a>
-      <#else>
-        <a href="${context!}/page/${posts.number}" class="pre">
+    <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+      <#if pagination.hasPrev>
+        <a href="${pagination.prevPageFullPath!}" class="pre">
           返回上一页
         </a>
       </#if>
-    </#if>
-    <#if posts.hasNext()>
-      <a href="${context!}/page/${posts.number+2}" class="next">
-        阅读更多文章
-      </a>
-    </#if>
+      <#if pagination.hasNext>
+        <a href="${pagination.nextPageFullPath!}" class="next">
+          阅读更多文章
+        </a>
+      </#if>
+    </@paginationTag>
   </#if>
 </div>

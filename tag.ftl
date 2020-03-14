@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="标签：${tag.name} · ${options.blog_title}" keywords="${options.seo_keywords!}" description="${options.seo_description!}" canonical="${context!}/tags/${tag.slugName!}" />
+<@head title="标签：${tag.name} · ${blog_title!}" canonical="${tag.fullPath!}" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">
@@ -11,7 +11,7 @@
                 <#list posts.content as post>
                 <div class="listing_item">
                     <div class="listing_post">
-                        <a href="${context!}/archives/${post.url!}">${post.title!}</a>
+                        <a href="${post.fullPath!}">${post.title!}</a>
                         <div class="post_time"><span class="date">${post.createTime?string('yyyy-MM-dd')}</span></div>
                     </div>
                 </div>
@@ -20,22 +20,18 @@
         </div>
         <div class="pagination">
             <#if posts.totalPages gt 1>
-                <#if posts.hasPrevious()>
-                    <#if posts.number == 1>
-                        <a href="${context!}/tags/${tag.slugName!}" class="pre">
-                            上一页
-                        </a>
-                    <#else>
-                        <a href="${context!}/tags/${tag.slugName!}/page/${posts.number}" class="pre">
-                            上一页
+                <@paginationTag method="tagPosts" page="${posts.number}" total="${posts.totalPages}" display="3" slug="${tag.slug!}">
+                    <#if pagination.hasPrev>
+                        <a href="${pagination.prevPageFullPath!}" class="pre">
+                            返回上一页
                         </a>
                     </#if>
-                </#if>
-                <#if posts.hasNext()>
-                    <a href="${context!}/tags/${tag.slugName!}/page/${posts.number+2}" class="next">
-                        下一页
-                    </a>
-                </#if>
+                    <#if pagination.hasNext>
+                        <a href="${pagination.nextPageFullPath!}" class="next">
+                            阅读更多文章
+                        </a>
+                    </#if>
+                </@paginationTag>
             </#if>
         </div>
     </div>

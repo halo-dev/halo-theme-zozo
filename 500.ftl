@@ -1,5 +1,5 @@
 <#include "layouts/partials/head.ftl">
-<@head title="500 Internal Error · ${blog_title!}" canonical="${context!}/500" />
+<@head title="500 Internal Error · ${blog_title!}" canonical="${blog_url!}/500" />
 <body>
 <div class="main animated">
     <#include "layouts/partials/nav.ftl">

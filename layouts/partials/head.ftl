@@ -18,8 +18,8 @@
 
   <@global.head />
 
-  <link rel="stylesheet" href="${theme_base!}/static/css/animate.min.css"/>
-  <link rel="stylesheet" href="${theme_base!}/static/css/remixicon.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css"/>
   <link rel="stylesheet" href="${theme_base!}/static/css/zozo.css"/>
   <link rel="stylesheet" href="${theme_base!}/static/css/highlight.css"/>
 

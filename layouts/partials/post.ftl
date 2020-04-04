@@ -14,12 +14,12 @@
     <div class="meta">
       <div class="info">
         <span class="field">
-          <i class="remixicon-map-pin-time-line"></i>
+          <i class="ri-map-pin-time-line"></i>
           <span class="date">${post.createTime?string('yyyy.MM.dd')}</span>
         </span>
         <#if post.tags?? && post.tags?size gt 0>
         <span class="field tags">
-          <i class="remixicon-stack-line"></i>
+          <i class="ri-stack-line"></i>
           <#list post.tags as tag>
           <a href="${tag.fullPath!}">${tag.name!}</a>
           </#list>

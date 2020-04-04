@@ -13,6 +13,6 @@
     </ul>
   </div>
   <div class="menu_icon">
-    <a id="menu_icon"><i class="remixicon-links-line"></i></a>
+    <a id="menu_icon"><i class="ri-links-line"></i></a>
   </div>
 </div>

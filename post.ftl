@@ -17,7 +17,7 @@
                     <div class="meta">
                         <div class="info">
                           <span class="field tags">
-                            <i class="remixicon-stack-line"></i>
+                            <i class="ri-stack-line"></i>
                             <#list tags as tag>
                                 <a href="${tag.fullPath!}">${tag.name!}</a>
                             </#list>

@@ -24,5 +24,7 @@
 </div>
 <#include "layouts/partials/footer.ftl">
 <#include "layouts/partials/js.ftl">
+<#include "./layouts/partials/highlightjs/libs-import.ftl" />
+<#include "./layouts/partials/highlightjs/scripts.ftl" />
 </body>
 </html>

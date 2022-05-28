@@ -456,23 +456,19 @@ hr {
 
 .markdown pre,
 .markdown code {
-  font-family: 'Roboto Mono', Menlo, Monaco, courier, monospace;
-  font-size: 0.9em;
-  background: #f8f8f8 !important;
   border: none;
 }
 
 .markdown pre {
   margin-top: 1.2em;
   margin-bottom: 2.2em;
-  padding: 15px 20px;
   display: block;
   overflow: auto;
   white-space: pre;
   word-wrap: break-word;
 }
 
-.markdown code {
+.markdown p code {
   color: #666666;
   padding: 4px 5px;
   border-radius: 2px;
@@ -481,7 +477,6 @@ hr {
 
 .markdown pre code {
   padding: 0;
-  color: #555555;
 }
 
 .markdown blockquote p {
